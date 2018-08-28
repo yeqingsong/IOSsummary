@@ -1,0 +1,91 @@
+1.SEL和IMP的学习理解
+链接 https://www.jianshu.com/p/4a09d5ebdc2c
+链接 https://www.jianshu.com/p/aff083ec3203
+SEL : 类成员方法的指针，但不同于C语言中的函数指针，函数指针直接保存了方法的地址，但SEL只是方法编号。
+IMP:一个函数指针,保存了方法的地址,系统通过SEL的编号，查找到IMP既方法地址调用方法.
+
+2.AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。
+
+3.isa指向当前对象元类，Objective-C中每个类都是一个类对象，NSObject是所有类对象的元类，具体见下面连接示意图
+http://images.cnblogs.com/cnblogs_com/csutanyu/342406/r_Screen%20Shot%202011-12-13%20at%209.42.39%20PM.png
+
+4.数组、链表、堆栈、队列和树
+博客链接https://blog.csdn.net/wei78008023/article/details/50735415/
+数组顺序存储，链表非顺序存储，只要知道前后的元素就行
+堆栈先进后出，只有栈顶操作
+队列先进先出
+树二叉树结构
+
+5.内存区域分布：栈区(stack),堆区(heap)，和全局静态区(global)。
+连接 https://www.jianshu.com/p/3b07f92d44ca
+栈区：主要存放局部变量和函数参数等相关变量，超出作用域之后自动释放。
+堆区：存放alloc,new等关键字生成的对象，内存管理arc和mrc就是对堆区进行操作
+全局静态区：主要存放静态数据，全局数据和常量，程序运行之后一直存在，定义在类外面的都是全局数据，前面加const的，就是常量数据，加static的是静态数据。
+全局变量：写法extern NSString *myTestStr,可以在任何一个类中通过extern关键字来访问，使用extern NSString *myTestStr。          
+全局常量：extern NSString * const myTestStr可以在其他类中访问不可修改，使用extern NSString *myTestStr。 
+静态变量：static NSString * myTestStr只能在当前类中访问和修改,在其他类中使用必须导入头文件.
+
+6.IOS消息转发机制
+1>动态方法解析 : 先问接收者所属的类, 你看能不能动态添加个方法来处理这个”未知的消息”? 如果能, 则消息转发结束.+ (BOOL)resolveInstanceMethod:(SEL)selector和resolveClassMethod:方法
+2>备胎(后备接收者) : 请接收者看看有没有其他对象能处理这条消息? 如果有, 则把消息转给那个对象, 消息转发结束.- (id)forwardingTargetForSelector:(SEL)selector
+3>消息签名 : 这里会要求你返回一个消息签名, 如果返回nil, 则消息转发结束,因此要在这里判断是否为nil返回一个NSMethodSignature对象,在完整的消息转发中返回实现当前方法.- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
+4>完整的消息转发 : 备胎都搞不定了, 那就只能把该消息相关的所有细节都封装到一个NSInvocation对象, 再问接收者一次, 快想办法把这个搞定了. 到了这个地步如果还无法处理, 消息转发机制也无能为力了。- (void)forwardInvocation:(NSInvocation *)invocation
+
+7.runtime在开发中的应用
+链接https://blog.csdn.net/coyote1994/article/details/52469954
+
+8. block的本质和__block修饰
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
