@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+extern NSString* const notificationCenter; 
 @interface ViewController : UIViewController
 
 

@@ -23,7 +23,7 @@
         Method originalMethod = class_getInstanceMethod(class, originalSelector);
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
         
-        
+        ///判断swizzledMethod是否实现
         BOOL didAddMethod = class_addMethod(class,
                                             originalSelector,
                                             method_getImplementation(swizzledMethod),
@@ -42,7 +42,7 @@
     
 }
 -(id)MYobjectForKey:(id)object{
-    NSLog(@"调用了新的方法");
+//    NSLog(@"调用了新的方法");
     if (object) {
         return [self MYobjectForKey:object];
     }

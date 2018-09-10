@@ -41,7 +41,7 @@
     
 }
 +(UIImage*)MYimageNamed:(NSString*)object{
-    NSLog(@"调用了新的方法");
+//    NSLog(@"调用了新的方法");
     if (object) {
         [[UIImage class] MYimageNamed:object];
     }

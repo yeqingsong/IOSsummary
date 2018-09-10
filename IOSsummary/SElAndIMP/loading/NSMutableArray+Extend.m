@@ -23,27 +23,27 @@
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
         
         
-//        BOOL didAddMethod = class_addMethod(class,
-//                                            originalSelector,
-//                                            method_getImplementation(swizzledMethod),
-//                                            method_getTypeEncoding(swizzledMethod));
-//
-//        if (didAddMethod) {
-//            class_replaceMethod(class,
-//                                swizzledSelector,
-//                                method_getImplementation(originalMethod),
-//                                method_getTypeEncoding(originalMethod));
-//        } else {
-//            method_exchangeImplementations(originalMethod, swizzledMethod);
-//        }
+        BOOL didAddMethod = class_addMethod(class,
+                                            originalSelector,
+                                            method_getImplementation(swizzledMethod),
+                                            method_getTypeEncoding(swizzledMethod));
+
+        if (didAddMethod) {
+            class_replaceMethod(class,
+                                swizzledSelector,
+                                method_getImplementation(originalMethod),
+                                method_getTypeEncoding(originalMethod));
+        } else {
+            method_exchangeImplementations(originalMethod, swizzledMethod);
+        }
         method_exchangeImplementations(originalMethod, swizzledMethod);
     });
     
 }
--(void)add_myObject:(id)object{
-    NSLog(@"调用了新的方法");
-    if (object) {
-        [self add_myObject:object];
-    }
-}
+//-(void)add_myObject:(id)object{
+//    NSLog(@"调用了新的方法");
+//    if (object) {
+//        [self add_myObject:object];
+//    }
+//}
 @end

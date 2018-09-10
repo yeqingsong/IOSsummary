@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		783E86D7213E2361003C3D6F /* CategoryText.m in Sources */ = {isa = PBXBuildFile; fileRef = 783E86D6213E2361003C3D6F /* CategoryText.m */; };
+		783E86DD213E27B6003C3D6F /* CategoryText+Extrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 783E86DC213E27B6003C3D6F /* CategoryText+Extrend.m */; };
+		783E86E1213E283A003C3D6F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783E86DF213E283A003C3D6F /* SecondViewController.m */; };
+		783E86E2213E283A003C3D6F /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783E86E0213E283A003C3D6F /* SecondViewController.xib */; };
 		7848C4DA212E84F8003E3ABB /* MYArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 7848C4D9212E84F8003E3ABB /* MYArray.m */; };
 		7848C4DD212E8C83003E3ABB /* ViewController+Tracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7848C4DC212E8C83003E3ABB /* ViewController+Tracking.m */; };
 		7848C4E0212E90E9003E3ABB /* NSMutableArray+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 7848C4DF212E90E9003E3ABB /* NSMutableArray+Extend.m */; };
@@ -22,6 +26,10 @@
 		785474552126674000ED354E /* SElAndIMPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 785474542126674000ED354E /* SElAndIMPUITests.m */; };
 		7854746421266A0800ED354E /* selectorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7854746321266A0800ED354E /* selectorModel.m */; };
 		7854746721266ADA00ED354E /* subSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7854746621266ADA00ED354E /* subSelectModel.m */; };
+		78A082AC214614690033F303 /* ResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A082AA214614690033F303 /* ResponseViewController.m */; };
+		78A082AD214614690033F303 /* ResponseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A082AB214614690033F303 /* ResponseViewController.xib */; };
+		78A082B021461A890033F303 /* UIView+Extrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A082AF21461A890033F303 /* UIView+Extrend.m */; };
+		78A082B321464FE30033F303 /* UIResponder+Extrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A082B221464FE30033F303 /* UIResponder+Extrend.m */; };
 		78AE3933212D0EC40090A3BD /* NSArray+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AE3932212D0EC40090A3BD /* NSArray+Extend.m */; };
 		78AE3937212D2D990090A3BD /* NSString+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AE3936212D2D990090A3BD /* NSString+Extend.m */; };
 		78AE393A212D4A080090A3BD /* NSObject+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AE3939212D4A080090A3BD /* NSObject+Extend.m */; };
@@ -45,6 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		783E86D5213E2361003C3D6F /* CategoryText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryText.h; sourceTree = "<group>"; };
+		783E86D6213E2361003C3D6F /* CategoryText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryText.m; sourceTree = "<group>"; };
+		783E86DB213E27B6003C3D6F /* CategoryText+Extrend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CategoryText+Extrend.h"; sourceTree = "<group>"; };
+		783E86DC213E27B6003C3D6F /* CategoryText+Extrend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CategoryText+Extrend.m"; sourceTree = "<group>"; };
+		783E86DE213E283A003C3D6F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		783E86DF213E283A003C3D6F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		783E86E0213E283A003C3D6F /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		7848C4D8212E84F8003E3ABB /* MYArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYArray.h; sourceTree = "<group>"; };
 		7848C4D9212E84F8003E3ABB /* MYArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYArray.m; sourceTree = "<group>"; };
 		7848C4DB212E8C83003E3ABB /* ViewController+Tracking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+Tracking.h"; sourceTree = "<group>"; };
@@ -75,6 +90,13 @@
 		7854746321266A0800ED354E /* selectorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = selectorModel.m; sourceTree = "<group>"; };
 		7854746521266ADA00ED354E /* subSelectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subSelectModel.h; sourceTree = "<group>"; };
 		7854746621266ADA00ED354E /* subSelectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subSelectModel.m; sourceTree = "<group>"; };
+		78A082A9214614690033F303 /* ResponseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseViewController.h; sourceTree = "<group>"; };
+		78A082AA214614690033F303 /* ResponseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponseViewController.m; sourceTree = "<group>"; };
+		78A082AB214614690033F303 /* ResponseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResponseViewController.xib; sourceTree = "<group>"; };
+		78A082AE21461A890033F303 /* UIView+Extrend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extrend.h"; sourceTree = "<group>"; };
+		78A082AF21461A890033F303 /* UIView+Extrend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extrend.m"; sourceTree = "<group>"; };
+		78A082B121464FE30033F303 /* UIResponder+Extrend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Extrend.h"; sourceTree = "<group>"; };
+		78A082B221464FE30033F303 /* UIResponder+Extrend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Extrend.m"; sourceTree = "<group>"; };
 		78AE3931212D0EC40090A3BD /* NSArray+Extend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extend.h"; sourceTree = "<group>"; };
 		78AE3932212D0EC40090A3BD /* NSArray+Extend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extend.m"; sourceTree = "<group>"; };
 		78AE3935212D2D990090A3BD /* NSString+Extend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extend.h"; sourceTree = "<group>"; };
@@ -108,6 +130,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		783E86D3213E220F003C3D6F /* loading */ = {
+			isa = PBXGroup;
+			children = (
+				7848C4E4212EA61D003E3ABB /* NSDictionary+extend.h */,
+				7848C4E5212EA61D003E3ABB /* NSDictionary+extend.m */,
+				7848C4DE212E90E9003E3ABB /* NSMutableArray+Extend.h */,
+				7848C4DF212E90E9003E3ABB /* NSMutableArray+Extend.m */,
+				7848C4D8212E84F8003E3ABB /* MYArray.h */,
+				7848C4D9212E84F8003E3ABB /* MYArray.m */,
+				7848C4E1212E9FD4003E3ABB /* UIImage+extend.h */,
+				7848C4E2212E9FD4003E3ABB /* UIImage+extend.m */,
+				7848C4DB212E8C83003E3ABB /* ViewController+Tracking.h */,
+				7848C4DC212E8C83003E3ABB /* ViewController+Tracking.m */,
+			);
+			path = loading;
+			sourceTree = "<group>";
+		};
+		783E86D4213E2252003C3D6F /* messageForwarding */ = {
+			isa = PBXGroup;
+			children = (
+				7854746221266A0800ED354E /* selectorModel.h */,
+				7854746321266A0800ED354E /* selectorModel.m */,
+				7854746521266ADA00ED354E /* subSelectModel.h */,
+				7854746621266ADA00ED354E /* subSelectModel.m */,
+				78AE3931212D0EC40090A3BD /* NSArray+Extend.h */,
+				78AE3932212D0EC40090A3BD /* NSArray+Extend.m */,
+				78AE3935212D2D990090A3BD /* NSString+Extend.h */,
+				78AE3936212D2D990090A3BD /* NSString+Extend.m */,
+				78AE3938212D4A080090A3BD /* NSObject+Extend.h */,
+				78AE3939212D4A080090A3BD /* NSObject+Extend.m */,
+			);
+			path = messageForwarding;
+			sourceTree = "<group>";
+		};
 		785474242126673E00ED354E = {
 			isa = PBXGroup;
 			children = (
@@ -135,26 +191,22 @@
 				785474312126673E00ED354E /* AppDelegate.m */,
 				785474332126673E00ED354E /* ViewController.h */,
 				785474342126673E00ED354E /* ViewController.m */,
-				7848C4E4212EA61D003E3ABB /* NSDictionary+extend.h */,
-				7848C4E5212EA61D003E3ABB /* NSDictionary+extend.m */,
-				7854746221266A0800ED354E /* selectorModel.h */,
-				7854746321266A0800ED354E /* selectorModel.m */,
-				7854746521266ADA00ED354E /* subSelectModel.h */,
-				7854746621266ADA00ED354E /* subSelectModel.m */,
-				78AE3931212D0EC40090A3BD /* NSArray+Extend.h */,
-				78AE3932212D0EC40090A3BD /* NSArray+Extend.m */,
-				7848C4DE212E90E9003E3ABB /* NSMutableArray+Extend.h */,
-				7848C4DF212E90E9003E3ABB /* NSMutableArray+Extend.m */,
-				78AE3935212D2D990090A3BD /* NSString+Extend.h */,
-				78AE3936212D2D990090A3BD /* NSString+Extend.m */,
-				78AE3938212D4A080090A3BD /* NSObject+Extend.h */,
-				78AE3939212D4A080090A3BD /* NSObject+Extend.m */,
-				7848C4D8212E84F8003E3ABB /* MYArray.h */,
-				7848C4D9212E84F8003E3ABB /* MYArray.m */,
-				7848C4E1212E9FD4003E3ABB /* UIImage+extend.h */,
-				7848C4E2212E9FD4003E3ABB /* UIImage+extend.m */,
-				7848C4DB212E8C83003E3ABB /* ViewController+Tracking.h */,
-				7848C4DC212E8C83003E3ABB /* ViewController+Tracking.m */,
+				783E86DE213E283A003C3D6F /* SecondViewController.h */,
+				783E86DF213E283A003C3D6F /* SecondViewController.m */,
+				783E86E0213E283A003C3D6F /* SecondViewController.xib */,
+				78A082A9214614690033F303 /* ResponseViewController.h */,
+				78A082AA214614690033F303 /* ResponseViewController.m */,
+				78A082AB214614690033F303 /* ResponseViewController.xib */,
+				78A082AE21461A890033F303 /* UIView+Extrend.h */,
+				78A082AF21461A890033F303 /* UIView+Extrend.m */,
+				78A082B121464FE30033F303 /* UIResponder+Extrend.h */,
+				78A082B221464FE30033F303 /* UIResponder+Extrend.m */,
+				783E86D5213E2361003C3D6F /* CategoryText.h */,
+				783E86D6213E2361003C3D6F /* CategoryText.m */,
+				783E86DB213E27B6003C3D6F /* CategoryText+Extrend.h */,
+				783E86DC213E27B6003C3D6F /* CategoryText+Extrend.m */,
+				783E86D3213E220F003C3D6F /* loading */,
+				783E86D4213E2252003C3D6F /* messageForwarding */,
 				785474362126673E00ED354E /* Main.storyboard */,
 				785474392126674000ED354E /* Assets.xcassets */,
 				7854743B2126674000ED354E /* LaunchScreen.storyboard */,
@@ -285,6 +337,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A082AD214614690033F303 /* ResponseViewController.xib in Resources */,
+				783E86E2213E283A003C3D6F /* SecondViewController.xib in Resources */,
 				7854743D2126674000ED354E /* LaunchScreen.storyboard in Resources */,
 				7854743A2126674000ED354E /* Assets.xcassets in Resources */,
 				785474382126673E00ED354E /* Main.storyboard in Resources */,
@@ -312,9 +366,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				783E86D7213E2361003C3D6F /* CategoryText.m in Sources */,
 				7854746421266A0800ED354E /* selectorModel.m in Sources */,
 				785474352126673E00ED354E /* ViewController.m in Sources */,
+				78A082B321464FE30033F303 /* UIResponder+Extrend.m in Sources */,
+				78A082B021461A890033F303 /* UIView+Extrend.m in Sources */,
 				785474402126674000ED354E /* main.m in Sources */,
+				78A082AC214614690033F303 /* ResponseViewController.m in Sources */,
+				783E86DD213E27B6003C3D6F /* CategoryText+Extrend.m in Sources */,
 				7848C4E3212E9FD4003E3ABB /* UIImage+extend.m in Sources */,
 				7848C4E0212E90E9003E3ABB /* NSMutableArray+Extend.m in Sources */,
 				7854746721266ADA00ED354E /* subSelectModel.m in Sources */,
@@ -322,6 +381,7 @@
 				78AE3937212D2D990090A3BD /* NSString+Extend.m in Sources */,
 				78AE3933212D0EC40090A3BD /* NSArray+Extend.m in Sources */,
 				785474322126673E00ED354E /* AppDelegate.m in Sources */,
+				783E86E1213E283A003C3D6F /* SecondViewController.m in Sources */,
 				7848C4DD212E8C83003E3ABB /* ViewController+Tracking.m in Sources */,
 				7848C4DA212E84F8003E3ABB /* MYArray.m in Sources */,
 				78AE393A212D4A080090A3BD /* NSObject+Extend.m in Sources */,

@@ -10,18 +10,18 @@
 #import <objc/message.h>
 #import "selectorModel.h"
 @implementation NSString (Extend)
-//+(BOOL)resolveClassMethod:(SEL)sel{
-//    return [super resolveClassMethod:sel];
-//}
-//+(BOOL)resolveInstanceMethod:(SEL)sel{
-//    NSLog(@"+++++++++++++++%@",NSStringFromSelector(sel));
-//    if (sel == @selector(count)) {
-//        NSLog(@"%@",self);
-//        class_addMethod([self class], sel, (IMP)logCurrentStr, "i@:");
-//        return YES;
-//    }
-//    return [super resolveInstanceMethod:sel];
-//}
++(BOOL)resolveClassMethod:(SEL)sel{
+    return [super resolveClassMethod:sel];
+}
++(BOOL)resolveInstanceMethod:(SEL)sel{
+    NSLog(@"+++++++++++++++%@",NSStringFromSelector(sel));
+    if (sel == @selector(count)) {
+        NSLog(@"%@",self);
+        class_addMethod([self class], sel, (IMP)logCurrentStr, "i@:");
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
+}
 int logCurrentStr(id class, SEL log){
     NSLog(@"这货不是数组");
     return 0;

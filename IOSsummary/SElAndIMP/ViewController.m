@@ -10,13 +10,19 @@
 #import "subSelectModel.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
+#import "SecondViewController.h"
+#import "ResponseViewController.h"
 extern NSString * myTestStr;
 //extern NSString * myTestStr1;
+NSString*const notificationCenter = @"NotificationCenter";
 @interface ViewController ()
-
+{
+    int globalNUM;
+}
 @end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,6 +32,7 @@ extern NSString * myTestStr;
     button.backgroundColor = [UIColor redColor];
     [button addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    globalNUM = 1;
 //    NSInteger i = 10;
 //    do{
 //        i++;
@@ -38,16 +45,63 @@ extern NSString * myTestStr;
     button2.backgroundColor = [UIColor yellowColor];
     [button2 addTarget:self action:@selector(clickButton1) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
+    
+    UIButton* button3 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button3.frame = CGRectMake(100,300, 100, 100);
+    button3.backgroundColor = [UIColor greenColor];
+    [button3 addTarget:self action:@selector(clickButton3) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button3];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(popCurrent) name:notificationCenter object:nil];
+    
+    
+}
+-(void)popCurrent{
+    NSLog(@"人见人爱花见花开通知君");
+    for (NSInteger i = 0; i<10000; i++) {
+        i++;
+    }
+    NSLog(@"人见人爱花见花开通知君111111");
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.view.backgroundColor =  [UIColor grayColor];
+    });
+    
+}
+-(void)clickButton3{
+    SecondViewController* vc = [[SecondViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
+    return;
+    
+    
+    void (^blk)(void) = ^{//没有截获自动变量的Block
+        NSLog(@"Stack Block");
+    };
+    blk();
+    NSLog(@"%@",[blk class]);//打印:__NSGlobalBlock__
+    
+    
+    static int j =10;
+    
+    void (^captureBlk)(void) = ^{//截获自动变量i的Block
+        NSLog(@"Capture:%d", self->globalNUM);
+        NSLog(@"Capture:%d", j);
+    };
+    globalNUM = 100;
+    j = 10000;
+    captureBlk();
+    NSLog(@"%@",[captureBlk class]);//打印：__NSMallocBlock__
+ 
 }
 
-
 -(void)clickButton1{
+    ResponseViewController* vc = [[ResponseViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
+    return;
     #pragma mark -- 消息转发机制的基本原理理解
     //https://www.jianshu.com/p/1073daee5b92
 //    https://blog.csdn.net/lvmaker/article/details/32396167
     selectorModel* person = [[selectorModel alloc]init];
     [person TestCrruentLog11111111];
-    [selectorModel testJiaHao];
+//    [selectorModel testJiaHao];
 //    class_setVersion([self class], 3.0);
 //    class_setVersion([self class], 333333);
     int num = class_getVersion([self class]);
@@ -74,6 +128,8 @@ extern NSString * myTestStr;
     NSLog(@"%@",myTestStr);
 //    NSLog(@"%@",myTestStr1);
     NSLog(@"%@",myTestStr2);
+    
+    
 }
 
 -(void)clickButton{
@@ -97,7 +153,7 @@ extern NSString * myTestStr;
     
     //iOS内存区域分布 https://www.jianshu.com/p/3b07f92d44ca
     NSString* str1 = @"123";
-    NSLog(@"str1 = %p, str1 = %@, str1=%x",str1,str1,&str1);
+    NSLog(@"str1 = %p, str1 = %@, str1=%x",str1,[str1 class],&str1);
     NSString* str2 = @"123";
     NSLog(@"str2 = %p, str2 = %@, str2=%x",str2,str2,&str2);
     //str1,str2的地址指向相同指向一个全局常量的地址
@@ -115,20 +171,35 @@ extern NSString * myTestStr;
     
     NSMutableArray* myArray;
     NSString* strr = @"asdadsasda";
+    void (^blk)(NSString* str)=^(NSString* str){
+        NSLog(@"%@",str2);
+//        NSMutableArray* arr = [[NSMutableArray alloc]init];
+//        NSLog(@"arr = %p,arr = %@, arr=%x",arr,arr,&arr);
+//        NSLog(@"str = %p,str = %@, str=%x",str,str,&str);
+    };
+    
+//     NSLog(@"%@",[blk class]);
+    NSLog(@"blk = %p,blk = %@, blk=%x",blk,blk,&blk);
+    blk(str5);
+     NSLog(@"%@",[blk class]);
+    NSLog(@"%@-----%p===== %x  ",[^{NSLog(@"%@",str1);} class],[^{NSLog(@"%@",str1);} class],[^{NSLog(@"%@",str1);} class]);
     
     myArray = (NSMutableArray*)strr;
     [myArray count];
     [myArray count];
-    NSLog(@"%lu",(unsigned long)[myArray count]);
+//    NSLog(@"%lu",(unsigned long)[myArray count]);
     NSMutableArray* arr = [NSMutableArray arrayWithObjects:@"12121",@"23232", nil];
     [arr addObject:@"111"];
 //    [arr addObject:nil];
-    NSLog(@"%lu",(unsigned long)arr.count);
+//    NSLog(@"%lu",(unsigned long)arr.count);
+    NSLog(@"arr = %p,arr = %@, arr=%x",arr,arr,&arr);
+    NSLog(@"arr = %p,arr = %@, arr=%x",[NSArray array],[NSArray array],[NSArray array]);
 //    NSMutableArray* myArray1;
 //    NSString* strr1 = @"asdadsasda";
 //    myArray1 = (NSMutableArray*)strr1;
 //    [myArray1 count];
-    
+//    0x104c57070
+//    0x1012fa758
 
 }
 
