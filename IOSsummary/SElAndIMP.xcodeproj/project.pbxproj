@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		783B18C32148B18F00920714 /* ModifierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783B18C12148B18F00920714 /* ModifierViewController.m */; };
+		783B18C42148B18F00920714 /* ModifierViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 783B18C22148B18F00920714 /* ModifierViewController.xib */; };
+		783B18C72148B2D400920714 /* ModifierModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 783B18C62148B2D400920714 /* ModifierModel.m */; };
 		783E86D7213E2361003C3D6F /* CategoryText.m in Sources */ = {isa = PBXBuildFile; fileRef = 783E86D6213E2361003C3D6F /* CategoryText.m */; };
 		783E86DD213E27B6003C3D6F /* CategoryText+Extrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 783E86DC213E27B6003C3D6F /* CategoryText+Extrend.m */; };
 		783E86E1213E283A003C3D6F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 783E86DF213E283A003C3D6F /* SecondViewController.m */; };
@@ -26,6 +29,11 @@
 		785474552126674000ED354E /* SElAndIMPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 785474542126674000ED354E /* SElAndIMPUITests.m */; };
 		7854746421266A0800ED354E /* selectorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7854746321266A0800ED354E /* selectorModel.m */; };
 		7854746721266ADA00ED354E /* subSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7854746621266ADA00ED354E /* subSelectModel.m */; };
+		7883EA6F2147649800BF8961 /* ResponseViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7883EA6D2147649800BF8961 /* ResponseViewCell.m */; };
+		7883EA702147649800BF8961 /* ResponseViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7883EA6E2147649800BF8961 /* ResponseViewCell.xib */; };
+		7883EA73214791BF00BF8961 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7883EA72214791BF00BF8961 /* TestView.m */; };
+		7883EA7621479FA400BF8961 /* blackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7883EA7521479FA400BF8961 /* blackView.m */; };
+		7883EA7921479FB500BF8961 /* redView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7883EA7821479FB500BF8961 /* redView.m */; };
 		78A082AC214614690033F303 /* ResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A082AA214614690033F303 /* ResponseViewController.m */; };
 		78A082AD214614690033F303 /* ResponseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A082AB214614690033F303 /* ResponseViewController.xib */; };
 		78A082B021461A890033F303 /* UIView+Extrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A082AF21461A890033F303 /* UIView+Extrend.m */; };
@@ -53,6 +61,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		783B18C02148B18F00920714 /* ModifierViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifierViewController.h; sourceTree = "<group>"; };
+		783B18C12148B18F00920714 /* ModifierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifierViewController.m; sourceTree = "<group>"; };
+		783B18C22148B18F00920714 /* ModifierViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModifierViewController.xib; sourceTree = "<group>"; };
+		783B18C52148B2D400920714 /* ModifierModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifierModel.h; sourceTree = "<group>"; };
+		783B18C62148B2D400920714 /* ModifierModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifierModel.m; sourceTree = "<group>"; };
 		783E86D5213E2361003C3D6F /* CategoryText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryText.h; sourceTree = "<group>"; };
 		783E86D6213E2361003C3D6F /* CategoryText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryText.m; sourceTree = "<group>"; };
 		783E86DB213E27B6003C3D6F /* CategoryText+Extrend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CategoryText+Extrend.h"; sourceTree = "<group>"; };
@@ -90,6 +103,15 @@
 		7854746321266A0800ED354E /* selectorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = selectorModel.m; sourceTree = "<group>"; };
 		7854746521266ADA00ED354E /* subSelectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subSelectModel.h; sourceTree = "<group>"; };
 		7854746621266ADA00ED354E /* subSelectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subSelectModel.m; sourceTree = "<group>"; };
+		7883EA6C2147649800BF8961 /* ResponseViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseViewCell.h; sourceTree = "<group>"; };
+		7883EA6D2147649800BF8961 /* ResponseViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponseViewCell.m; sourceTree = "<group>"; };
+		7883EA6E2147649800BF8961 /* ResponseViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResponseViewCell.xib; sourceTree = "<group>"; };
+		7883EA71214791BF00BF8961 /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		7883EA72214791BF00BF8961 /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		7883EA7421479FA400BF8961 /* blackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blackView.h; sourceTree = "<group>"; };
+		7883EA7521479FA400BF8961 /* blackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blackView.m; sourceTree = "<group>"; };
+		7883EA7721479FB500BF8961 /* redView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = redView.h; sourceTree = "<group>"; };
+		7883EA7821479FB500BF8961 /* redView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = redView.m; sourceTree = "<group>"; };
 		78A082A9214614690033F303 /* ResponseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseViewController.h; sourceTree = "<group>"; };
 		78A082AA214614690033F303 /* ResponseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponseViewController.m; sourceTree = "<group>"; };
 		78A082AB214614690033F303 /* ResponseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResponseViewController.xib; sourceTree = "<group>"; };
@@ -191,12 +213,26 @@
 				785474312126673E00ED354E /* AppDelegate.m */,
 				785474332126673E00ED354E /* ViewController.h */,
 				785474342126673E00ED354E /* ViewController.m */,
+				783B18C02148B18F00920714 /* ModifierViewController.h */,
+				783B18C12148B18F00920714 /* ModifierViewController.m */,
+				783B18C22148B18F00920714 /* ModifierViewController.xib */,
+				783B18C52148B2D400920714 /* ModifierModel.h */,
+				783B18C62148B2D400920714 /* ModifierModel.m */,
 				783E86DE213E283A003C3D6F /* SecondViewController.h */,
 				783E86DF213E283A003C3D6F /* SecondViewController.m */,
 				783E86E0213E283A003C3D6F /* SecondViewController.xib */,
 				78A082A9214614690033F303 /* ResponseViewController.h */,
 				78A082AA214614690033F303 /* ResponseViewController.m */,
 				78A082AB214614690033F303 /* ResponseViewController.xib */,
+				7883EA6C2147649800BF8961 /* ResponseViewCell.h */,
+				7883EA6D2147649800BF8961 /* ResponseViewCell.m */,
+				7883EA6E2147649800BF8961 /* ResponseViewCell.xib */,
+				7883EA71214791BF00BF8961 /* TestView.h */,
+				7883EA72214791BF00BF8961 /* TestView.m */,
+				7883EA7421479FA400BF8961 /* blackView.h */,
+				7883EA7521479FA400BF8961 /* blackView.m */,
+				7883EA7721479FB500BF8961 /* redView.h */,
+				7883EA7821479FB500BF8961 /* redView.m */,
 				78A082AE21461A890033F303 /* UIView+Extrend.h */,
 				78A082AF21461A890033F303 /* UIView+Extrend.m */,
 				78A082B121464FE30033F303 /* UIResponder+Extrend.h */,
@@ -340,6 +376,8 @@
 				78A082AD214614690033F303 /* ResponseViewController.xib in Resources */,
 				783E86E2213E283A003C3D6F /* SecondViewController.xib in Resources */,
 				7854743D2126674000ED354E /* LaunchScreen.storyboard in Resources */,
+				783B18C42148B18F00920714 /* ModifierViewController.xib in Resources */,
+				7883EA702147649800BF8961 /* ResponseViewCell.xib in Resources */,
 				7854743A2126674000ED354E /* Assets.xcassets in Resources */,
 				785474382126673E00ED354E /* Main.storyboard in Resources */,
 			);
@@ -370,9 +408,14 @@
 				7854746421266A0800ED354E /* selectorModel.m in Sources */,
 				785474352126673E00ED354E /* ViewController.m in Sources */,
 				78A082B321464FE30033F303 /* UIResponder+Extrend.m in Sources */,
+				7883EA7621479FA400BF8961 /* blackView.m in Sources */,
 				78A082B021461A890033F303 /* UIView+Extrend.m in Sources */,
 				785474402126674000ED354E /* main.m in Sources */,
+				783B18C72148B2D400920714 /* ModifierModel.m in Sources */,
+				7883EA7921479FB500BF8961 /* redView.m in Sources */,
 				78A082AC214614690033F303 /* ResponseViewController.m in Sources */,
+				783B18C32148B18F00920714 /* ModifierViewController.m in Sources */,
+				7883EA73214791BF00BF8961 /* TestView.m in Sources */,
 				783E86DD213E27B6003C3D6F /* CategoryText+Extrend.m in Sources */,
 				7848C4E3212E9FD4003E3ABB /* UIImage+extend.m in Sources */,
 				7848C4E0212E90E9003E3ABB /* NSMutableArray+Extend.m in Sources */,
@@ -381,6 +424,7 @@
 				78AE3937212D2D990090A3BD /* NSString+Extend.m in Sources */,
 				78AE3933212D0EC40090A3BD /* NSArray+Extend.m in Sources */,
 				785474322126673E00ED354E /* AppDelegate.m in Sources */,
+				7883EA6F2147649800BF8961 /* ResponseViewCell.m in Sources */,
 				783E86E1213E283A003C3D6F /* SecondViewController.m in Sources */,
 				7848C4DD212E8C83003E3ABB /* ViewController+Tracking.m in Sources */,
 				7848C4DA212E84F8003E3ABB /* MYArray.m in Sources */,

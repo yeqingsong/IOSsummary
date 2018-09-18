@@ -12,6 +12,7 @@
 #import <objc/message.h>
 #import "SecondViewController.h"
 #import "ResponseViewController.h"
+#import "ModifierViewController.h"
 extern NSString * myTestStr;
 //extern NSString * myTestStr1;
 NSString*const notificationCenter = @"NotificationCenter";
@@ -133,6 +134,9 @@ NSString*const notificationCenter = @"NotificationCenter";
 }
 
 -(void)clickButton{
+//    ModifierViewController* vc = [[ModifierViewController alloc]init];
+//    [self presentViewController:vc animated:YES completion:nil];
+    
 #pragma mark -- SEL和IMP原理
     //SEL : 类成员方法的指针，但不同于C语言中的函数指针，函数指针直接保存了方法的地址，但SEL只是方法编号。
     //IMP:一个函数指针,保存了方法的地址
@@ -164,8 +168,9 @@ NSString*const notificationCenter = @"NotificationCenter";
     NSLog(@"str4 = %p, str4 = %@, str4=%x",str4,str4,&str4);
     NSString* str5 = [[NSString alloc]initWithString:str3];
     NSLog(@"str5 = %p, str5 = %@, str5=%x",str5,str5,&str5);
-    NSString* str6 = [[NSString alloc]initWithString:str3];
-    str6 = @"123";
+    NSString* str6 = [NSString stringWithFormat:@"123"];
+    
+//    str6 = @"123";
     NSLog(@"str6 = %p,str6 = %@, str6=%x",str6,str6,&str6);
     NSLog(@"str3 = %p, str3 = %@, str3=%x",str3,str3,&str3);
     

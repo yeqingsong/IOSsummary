@@ -16,6 +16,7 @@
 @interface SecondViewController ()
 {
     NSInteger _tickets ;
+    NSLock* _lock;
 }
 @end
 __weak id objTrace;
@@ -98,8 +99,8 @@ __weak id objTrace;
 }
 -(void)testNSLock{
     
-//    NSRecursiveLock *lock = [[NSRecursiveLock alloc] init];
-    NSLock *lock = [[NSLock alloc] init];
+    NSRecursiveLock *lock = [[NSRecursiveLock alloc] init];
+//    NSLock *lock = [[NSLock alloc] init];
     dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         static void (^RecursiveBlock)(int);
         RecursiveBlock = ^(int value) {
@@ -138,24 +139,43 @@ __weak id objTrace;
     NSLog(@"%@ %@",model.height,model.class);
     [model changeAge1];
     NSLog(@"-----------%@ %@",model.height,model.class);
-    _tickets = 5;
+    _tickets = 10;
     dispatch_queue_t serialQueue = dispatch_queue_create("com.example.SerialQueue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t serialQueue1 = dispatch_queue_create("com.example.serialQueue1", DISPATCH_QUEUE_CONCURRENT);
+    _lock = [[NSLock alloc]init];
     dispatch_async(serialQueue, ^{
+//        [lock lock];
         [self saleTickets];
+//        [lock unlock];
     });
     dispatch_async(serialQueue, ^{
+//        [lock lock];
         [self saleTickets];
+//        [lock unlock];
     });
+    
+    
+    dispatch_async(serialQueue1, ^{
+        //        [lock lock];
+        [self saleTickets];
+        //        [lock unlock];
+    });
+    dispatch_async(serialQueue1, ^{
+        //        [lock lock];
+        [self saleTickets];
+        //        [lock unlock];
+    });
+    
     
 }
 - (void)saleTickets
 {
+    
     while (1) {
         @synchronized(self) {
+//        [_lock lock];
             [NSThread sleepForTimeInterval:1];
-            @synchronized(self){
-                NSLog(@"asdasdasdasd1");
-            }
+            
             if (_tickets > 0) {
                 _tickets--;
                 NSLog(@"剩余票数= %ld, Thread:%@",(long)_tickets,[NSThread currentThread]);
@@ -163,6 +183,7 @@ __weak id objTrace;
                 NSLog(@"票卖完了  Thread:%@",[NSThread currentThread]);
                 break;
             }
+//        [_lock unlock];
         }
     }
 }
