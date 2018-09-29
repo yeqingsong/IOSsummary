@@ -13,6 +13,7 @@
 #import "SecondViewController.h"
 #import "ResponseViewController.h"
 #import "ModifierViewController.h"
+#import "LoadImageController.h"
 extern NSString * myTestStr;
 //extern NSString * myTestStr1;
 NSString*const notificationCenter = @"NotificationCenter";
@@ -55,6 +56,17 @@ NSString*const notificationCenter = @"NotificationCenter";
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(popCurrent) name:notificationCenter object:nil];
     
     
+    UIButton* button4 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button4.frame = CGRectMake(100,400, 100, 100);
+    button4.backgroundColor = [UIColor blackColor];
+    [button4 addTarget:self action:@selector(clickButton4) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button4];
+
+    
+}
+-(void)clickButton4{
+    LoadImageController* vc =[[LoadImageController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 -(void)popCurrent{
     NSLog(@"人见人爱花见花开通知君");
@@ -102,9 +114,9 @@ NSString*const notificationCenter = @"NotificationCenter";
 //    https://blog.csdn.net/lvmaker/article/details/32396167
     selectorModel* person = [[selectorModel alloc]init];
     [person TestCrruentLog11111111];
-//    [selectorModel testJiaHao];
-//    class_setVersion([self class], 3.0);
-//    class_setVersion([self class], 333333);
+    [selectorModel testJiaHao];
+    class_setVersion([self class], 3.0);
+    class_setVersion([self class], 333333);
     int num = class_getVersion([self class]);
     
     NSLog(@"%s",class_getName([self class]));

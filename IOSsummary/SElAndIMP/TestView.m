@@ -12,20 +12,20 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     NSLog(@"testView");
 }
-//-(UIView*)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-//    UIView* view = [super hitTest:point withEvent:event];
-//    NSLog(@"%ld",self.subviews.count);
-//    for (UIView* view in self.subviews) {
-//        if ([view isKindOfClass:[blackView class]]) {
-//            return view;
-//        }
+-(UIView*)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+    UIView* view = [super hitTest:point withEvent:event];
+    NSLog(@"%ld",self.subviews.count);
+    for (UIView* view in self.subviews) {
+        if ([view isKindOfClass:[blackView class]]) {
+            return view;
+        }
+    }
+//    if (view) {
+//        <#statements#>
 //    }
-////    if (view) {
-////        <#statements#>
-////    }
-//    
-//    return view;
-//}
+    
+    return view;
+}
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {

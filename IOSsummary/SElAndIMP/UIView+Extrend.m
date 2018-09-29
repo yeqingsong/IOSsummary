@@ -47,7 +47,7 @@
 //}
 //-(UIView*)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 -(UIView*)current_hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-//    NSLog(@"%@ %s",[self class], __PRETTY_FUNCTION__);
+    NSLog(@"%@ %s",[self class], __PRETTY_FUNCTION__);
    return  [self current_hitTest:point withEvent:event];
 }
 -(void)current_touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

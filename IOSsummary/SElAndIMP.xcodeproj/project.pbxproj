@@ -29,6 +29,11 @@
 		785474552126674000ED354E /* SElAndIMPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 785474542126674000ED354E /* SElAndIMPUITests.m */; };
 		7854746421266A0800ED354E /* selectorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7854746321266A0800ED354E /* selectorModel.m */; };
 		7854746721266ADA00ED354E /* subSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7854746621266ADA00ED354E /* subSelectModel.m */; };
+		78566A2A215389BB00D1945C /* large_leaves_70mp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78566A29215389BB00D1945C /* large_leaves_70mp.jpg */; };
+		78566A2E215389DC00D1945C /* LoadImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78566A2C215389DC00D1945C /* LoadImageController.m */; };
+		78566A2F215389DC00D1945C /* LoadImageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78566A2D215389DC00D1945C /* LoadImageController.xib */; };
+		7861A81021548FF9004EC56C /* UIApplicationclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7861A80F21548FF9004EC56C /* UIApplicationclass.m */; };
+		7861A8132154921D004EC56C /* UIApplication+extrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 7861A8122154921D004EC56C /* UIApplication+extrend.m */; };
 		7883EA6F2147649800BF8961 /* ResponseViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7883EA6D2147649800BF8961 /* ResponseViewCell.m */; };
 		7883EA702147649800BF8961 /* ResponseViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7883EA6E2147649800BF8961 /* ResponseViewCell.xib */; };
 		7883EA73214791BF00BF8961 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7883EA72214791BF00BF8961 /* TestView.m */; };
@@ -103,6 +108,14 @@
 		7854746321266A0800ED354E /* selectorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = selectorModel.m; sourceTree = "<group>"; };
 		7854746521266ADA00ED354E /* subSelectModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = subSelectModel.h; sourceTree = "<group>"; };
 		7854746621266ADA00ED354E /* subSelectModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = subSelectModel.m; sourceTree = "<group>"; };
+		78566A29215389BB00D1945C /* large_leaves_70mp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = large_leaves_70mp.jpg; sourceTree = "<group>"; };
+		78566A2B215389DC00D1945C /* LoadImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadImageController.h; sourceTree = "<group>"; };
+		78566A2C215389DC00D1945C /* LoadImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadImageController.m; sourceTree = "<group>"; };
+		78566A2D215389DC00D1945C /* LoadImageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadImageController.xib; sourceTree = "<group>"; };
+		7861A80E21548FF9004EC56C /* UIApplicationclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIApplicationclass.h; sourceTree = "<group>"; };
+		7861A80F21548FF9004EC56C /* UIApplicationclass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIApplicationclass.m; sourceTree = "<group>"; };
+		7861A8112154921D004EC56C /* UIApplication+extrend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+extrend.h"; sourceTree = "<group>"; };
+		7861A8122154921D004EC56C /* UIApplication+extrend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+extrend.m"; sourceTree = "<group>"; };
 		7883EA6C2147649800BF8961 /* ResponseViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseViewCell.h; sourceTree = "<group>"; };
 		7883EA6D2147649800BF8961 /* ResponseViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponseViewCell.m; sourceTree = "<group>"; };
 		7883EA6E2147649800BF8961 /* ResponseViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResponseViewCell.xib; sourceTree = "<group>"; };
@@ -193,6 +206,7 @@
 				785474482126674000ED354E /* SElAndIMPTests */,
 				785474532126674000ED354E /* SElAndIMPUITests */,
 				7854742E2126673E00ED354E /* Products */,
+				78566A29215389BB00D1945C /* large_leaves_70mp.jpg */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,10 +223,17 @@
 		7854742F2126673E00ED354E /* SElAndIMP */ = {
 			isa = PBXGroup;
 			children = (
+				7861A80E21548FF9004EC56C /* UIApplicationclass.h */,
+				7861A80F21548FF9004EC56C /* UIApplicationclass.m */,
+				7861A8112154921D004EC56C /* UIApplication+extrend.h */,
+				7861A8122154921D004EC56C /* UIApplication+extrend.m */,
 				785474302126673E00ED354E /* AppDelegate.h */,
 				785474312126673E00ED354E /* AppDelegate.m */,
 				785474332126673E00ED354E /* ViewController.h */,
 				785474342126673E00ED354E /* ViewController.m */,
+				78566A2B215389DC00D1945C /* LoadImageController.h */,
+				78566A2C215389DC00D1945C /* LoadImageController.m */,
+				78566A2D215389DC00D1945C /* LoadImageController.xib */,
 				783B18C02148B18F00920714 /* ModifierViewController.h */,
 				783B18C12148B18F00920714 /* ModifierViewController.m */,
 				783B18C22148B18F00920714 /* ModifierViewController.xib */,
@@ -374,6 +395,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				78A082AD214614690033F303 /* ResponseViewController.xib in Resources */,
+				78566A2F215389DC00D1945C /* LoadImageController.xib in Resources */,
+				78566A2A215389BB00D1945C /* large_leaves_70mp.jpg in Resources */,
 				783E86E2213E283A003C3D6F /* SecondViewController.xib in Resources */,
 				7854743D2126674000ED354E /* LaunchScreen.storyboard in Resources */,
 				783B18C42148B18F00920714 /* ModifierViewController.xib in Resources */,
@@ -405,16 +428,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				783E86D7213E2361003C3D6F /* CategoryText.m in Sources */,
+				7861A8132154921D004EC56C /* UIApplication+extrend.m in Sources */,
 				7854746421266A0800ED354E /* selectorModel.m in Sources */,
 				785474352126673E00ED354E /* ViewController.m in Sources */,
 				78A082B321464FE30033F303 /* UIResponder+Extrend.m in Sources */,
 				7883EA7621479FA400BF8961 /* blackView.m in Sources */,
 				78A082B021461A890033F303 /* UIView+Extrend.m in Sources */,
 				785474402126674000ED354E /* main.m in Sources */,
+				78566A2E215389DC00D1945C /* LoadImageController.m in Sources */,
 				783B18C72148B2D400920714 /* ModifierModel.m in Sources */,
 				7883EA7921479FB500BF8961 /* redView.m in Sources */,
 				78A082AC214614690033F303 /* ResponseViewController.m in Sources */,
 				783B18C32148B18F00920714 /* ModifierViewController.m in Sources */,
+				7861A81021548FF9004EC56C /* UIApplicationclass.m in Sources */,
 				7883EA73214791BF00BF8961 /* TestView.m in Sources */,
 				783E86DD213E27B6003C3D6F /* CategoryText+Extrend.m in Sources */,
 				7848C4E3212E9FD4003E3ABB /* UIImage+extend.m in Sources */,

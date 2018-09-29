@@ -38,9 +38,16 @@ void testCurrent(id Class,SEL _asdasdasdasd){
     if (sel == @selector(testJiaHao)) {
         NSLog(@"testCurrentSelector");
 //在这个方法里不能直接使用class_addMethod，我也不知道为啥。。。。。可能class_addMethod只能创建实例类方法，因此可以在这里调用resolveInstanceMethod方法，在resolveInstanceMethod方法中实现未找到类方法
-        class_addMethod([self class],sel,(IMP)testCurrent,"v#:");
+//        class_addMethod(objc_getClass([NSStringFromClass([self class])UTF8String]),sel,(IMP)testCurrent,"v#:");
+        
 //        class_addMethod([self class],sel, class_getClassMethod([self class], @selector(tihuan)),"v@:");
-        class_addMethod([self class],sel, class_getMethodImplementation(self, @selector(tihuan)),"v#:");
+        
+        
+        
+        
+//        class_addMethod(object_getClass(self),sel, class_getMethodImplementation(object_getClass(self), @selector(tihuan)),"v#:");
+//        object_getClass(<#id  _Nullable obj#>)
+         class_addMethod(objc_getClass(object_getClassName(self)),sel, class_getMethodImplementation(objc_getClass(object_getClassName(self)), @selector(tihuan)),"v#:");
         //调用resolveInstanceMethod方法使用self和【self class】都没错，个人认为是系统会一直查询到NSObject层，而NSObject类的实例类和元类都是他自己
 //        [[self class] resolveInstanceMethod:sel];
         return YES;
