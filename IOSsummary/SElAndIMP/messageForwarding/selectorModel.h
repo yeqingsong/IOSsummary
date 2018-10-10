@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ProjectName.h"
 ///全局变量
 extern NSString * myTestStr;
 ///静态变量
@@ -20,4 +21,5 @@ extern NSString * const myTestStr2 ;
 +(void)testJiaHao;
 -(void)TestCrruentLog11111111;
 -(void)count;
+-(void)sleep;
 @end

@@ -106,21 +106,26 @@ NSString*const notificationCenter = @"NotificationCenter";
 }
 
 -(void)clickButton1{
-    ResponseViewController* vc = [[ResponseViewController alloc]init];
-    [self presentViewController:vc animated:YES completion:nil];
-    return;
+//    ResponseViewController* vc = [[ResponseViewController alloc]init];
+//    [self presentViewController:vc animated:YES completion:nil];
+//    return;
     #pragma mark -- 消息转发机制的基本原理理解
     //https://www.jianshu.com/p/1073daee5b92
 //    https://blog.csdn.net/lvmaker/article/details/32396167
     selectorModel* person = [[selectorModel alloc]init];
     [person TestCrruentLog11111111];
     [selectorModel testJiaHao];
+    [person sleep];
     class_setVersion([self class], 3.0);
     class_setVersion([self class], 333333);
-    int num = class_getVersion([self class]);
+//    int num = class_getVersion([self class]);
     
-    NSLog(@"%s",class_getName([self class]));
-    NSLog(@"%zu",class_getInstanceSize([self class]));
+    NSLog(@"%p",[person class]);
+    NSLog(@"%p",object_getClass(person));
+    NSLog(@"%p",object_getClass([person class]));
+    NSLog(@"%p",object_getClass([selectorModel class]));
+    NSLog(@"%p",[[person class] class]);
+
 //    [person count];
 //    [selectorModel testJiaHao];
     UIImage* image = [UIImage imageNamed:@"123123123"];

@@ -47,7 +47,13 @@ void testCurrent(id Class,SEL _asdasdasdasd){
         
 //        class_addMethod(object_getClass(self),sel, class_getMethodImplementation(object_getClass(self), @selector(tihuan)),"v#:");
 //        object_getClass(<#id  _Nullable obj#>)
-         class_addMethod(objc_getClass(object_getClassName(self)),sel, class_getMethodImplementation(objc_getClass(object_getClassName(self)), @selector(tihuan)),"v#:");
+        NSLog(@"%s",object_getClassName([self class]));
+        NSLog(@"%p",object_getClass(self));
+        NSLog(@"%p",[self class]);
+        const char *  m = (const char *)class_getClassMethod(object_getClass(self), @selector(tihuan));
+        
+         class_addMethod(object_getClass(self),sel, class_getMethodImplementation(object_getClass(self), @selector(tihuan)),m/*"v#:"*/);
+        
         //调用resolveInstanceMethod方法使用self和【self class】都没错，个人认为是系统会一直查询到NSObject层，而NSObject类的实例类和元类都是他自己
 //        [[self class] resolveInstanceMethod:sel];
         return YES;
@@ -61,6 +67,7 @@ void testCurrent(id Class,SEL _asdasdasdasd){
     NSLog(@"resolveInstanceMethod: %@", NSStringFromSelector(sel));
     
     if(sel ==@selector(TestCrruentLog11111111)) {
+        const char *  m = (const char *)class_getClassMethod(object_getClass(self), @selector(TestCrruentLog));
         class_addMethod([self class], sel, class_getMethodImplementation(self, @selector(TestCrruentLog)),"v@:");
         class_getName(self);
         class_setVersion([self class], 3.0);
@@ -70,6 +77,29 @@ void testCurrent(id Class,SEL _asdasdasdasd){
     }
     return[super resolveInstanceMethod:sel];
   
+}
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
+{
+    NSString *sel = NSStringFromSelector(aSelector);
+    // 判断要转发的SEL
+    if ([sel isEqualToString:@"sleep"]) {
+        // 为转发的方法手动生成签名
+        return [NSMethodSignature signatureWithObjCTypes:"v@:"];
+    }
+    
+    return [super methodSignatureForSelector:aSelector];
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation
+{
+    SEL selector = [anInvocation selector];
+    // 新建需要转发消息的对象
+    ProjectName *child = [[ProjectName alloc] init];
+    id class = object_getClass(child);
+    if ([class respondsToSelector:selector]) {
+        // 唤醒这个方法
+        [anInvocation invokeWithTarget:class];
+    }
 }
 
 @end

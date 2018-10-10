@@ -39,6 +39,7 @@
 		7883EA73214791BF00BF8961 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7883EA72214791BF00BF8961 /* TestView.m */; };
 		7883EA7621479FA400BF8961 /* blackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7883EA7521479FA400BF8961 /* blackView.m */; };
 		7883EA7921479FB500BF8961 /* redView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7883EA7821479FB500BF8961 /* redView.m */; };
+		788651D9216AFB1A000C29CB /* ProjectName.m in Sources */ = {isa = PBXBuildFile; fileRef = 788651D8216AFB1A000C29CB /* ProjectName.m */; };
 		78A082AC214614690033F303 /* ResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A082AA214614690033F303 /* ResponseViewController.m */; };
 		78A082AD214614690033F303 /* ResponseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A082AB214614690033F303 /* ResponseViewController.xib */; };
 		78A082B021461A890033F303 /* UIView+Extrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A082AF21461A890033F303 /* UIView+Extrend.m */; };
@@ -125,6 +126,8 @@
 		7883EA7521479FA400BF8961 /* blackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blackView.m; sourceTree = "<group>"; };
 		7883EA7721479FB500BF8961 /* redView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = redView.h; sourceTree = "<group>"; };
 		7883EA7821479FB500BF8961 /* redView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = redView.m; sourceTree = "<group>"; };
+		788651D7216AFB1A000C29CB /* ProjectName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectName.h; sourceTree = "<group>"; };
+		788651D8216AFB1A000C29CB /* ProjectName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProjectName.m; sourceTree = "<group>"; };
 		78A082A9214614690033F303 /* ResponseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponseViewController.h; sourceTree = "<group>"; };
 		78A082AA214614690033F303 /* ResponseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponseViewController.m; sourceTree = "<group>"; };
 		78A082AB214614690033F303 /* ResponseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResponseViewController.xib; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 			children = (
 				7854746221266A0800ED354E /* selectorModel.h */,
 				7854746321266A0800ED354E /* selectorModel.m */,
+				788651D7216AFB1A000C29CB /* ProjectName.h */,
+				788651D8216AFB1A000C29CB /* ProjectName.m */,
 				7854746521266ADA00ED354E /* subSelectModel.h */,
 				7854746621266ADA00ED354E /* subSelectModel.m */,
 				78AE3931212D0EC40090A3BD /* NSArray+Extend.h */,
@@ -443,6 +448,7 @@
 				7861A81021548FF9004EC56C /* UIApplicationclass.m in Sources */,
 				7883EA73214791BF00BF8961 /* TestView.m in Sources */,
 				783E86DD213E27B6003C3D6F /* CategoryText+Extrend.m in Sources */,
+				788651D9216AFB1A000C29CB /* ProjectName.m in Sources */,
 				7848C4E3212E9FD4003E3ABB /* UIImage+extend.m in Sources */,
 				7848C4E0212E90E9003E3ABB /* NSMutableArray+Extend.m in Sources */,
 				7854746721266ADA00ED354E /* subSelectModel.m in Sources */,
