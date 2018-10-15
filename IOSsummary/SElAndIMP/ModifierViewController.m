@@ -63,7 +63,7 @@
     
     
 #pragma mark -- 浅copy与深copy
-    NSArray* array = [NSArray arrayWithObjects:@"asdad", nil];
+    NSArray* array = [NSArray arrayWithObjects:model, nil];
     ///不完全深copy开辟新的内存地址空间但是内部元素地址空间没变
     NSArray*copyArray1 = [array copy];
     NSArray*mutableArray1 = [array mutableCopy];
@@ -71,7 +71,7 @@
     NSLog(@"copyArray    %p   %p",copyArray1,copyArray1[0]);
     NSLog(@"mutableArray    %p   %p",mutableArray1,mutableArray1[0]);
     
-    model.array = [NSMutableArray arrayWithObjects:@"asdad", nil];
+    model.array = [NSMutableArray arrayWithObjects:model, nil];
     ///不完全深copy开辟新的内存地址空间但是内部元素地址空间没变
     NSArray*copyArray = [model.array copy];
     NSArray*mutableArray = [model.array mutableCopy];

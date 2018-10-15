@@ -84,7 +84,7 @@ NSString*const notificationCenter = @"NotificationCenter";
     [self presentViewController:vc animated:YES completion:nil];
     return;
     
-    
+   
     void (^blk)(void) = ^{//没有截获自动变量的Block
         NSLog(@"Stack Block");
     };
@@ -151,8 +151,8 @@ NSString*const notificationCenter = @"NotificationCenter";
 }
 
 -(void)clickButton{
-//    ModifierViewController* vc = [[ModifierViewController alloc]init];
-//    [self presentViewController:vc animated:YES completion:nil];
+    ModifierViewController* vc = [[ModifierViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
     
 #pragma mark -- SEL和IMP原理
     //SEL : 类成员方法的指针，但不同于C语言中的函数指针，函数指针直接保存了方法的地址，但SEL只是方法编号。
