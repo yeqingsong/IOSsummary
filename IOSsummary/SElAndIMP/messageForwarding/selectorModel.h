@@ -16,6 +16,7 @@ static NSString * const myTestStr1 = @"myTestStr1";
 extern NSString * const myTestStr2 ;
 @interface selectorModel : NSObject
 @property (nonatomic,assign) SEL selectTest;//方法指针
+@property (nonatomic,copy) NSString* sex;
 -(void)TestParentMethod;
 -(void)TestCrruentLog;
 +(void)testJiaHao;

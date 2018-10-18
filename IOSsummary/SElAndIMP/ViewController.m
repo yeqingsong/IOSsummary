@@ -64,9 +64,24 @@ NSString*const notificationCenter = @"NotificationCenter";
 
     
 }
+///
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
 -(void)clickButton4{
     LoadImageController* vc =[[LoadImageController alloc]init];
     [self presentViewController:vc animated:YES completion:nil];
+//    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 -(void)popCurrent{
     NSLog(@"人见人爱花见花开通知君");
