@@ -43,21 +43,23 @@
 //    [self doSonmethings];
     selectorModel* model = [[selectorModel alloc]init];
     model.sex = @"0";
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:model];
     
-    NSArray *array= [NSArray arrayWithObjects:@"1",@"2",@"2.3",@"3.0",@"4.0",@"10",nil];
     
-    CGFloat sum = [[array valueForKeyPath:@"@sum.floatValue"] floatValue];
-    
-    CGFloat avg = [[array valueForKeyPath:@"@avg.floatValue"] floatValue];
-    
-    CGFloat max =[[array valueForKeyPath:@"@max.floatValue"] floatValue];
-    
-    CGFloat min =[[array valueForKeyPath:@"@min.floatValue"] floatValue];
-    
+//    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:model];
+//
+//    selectorModel* model1 = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+//    NSArray *array= [NSArray arrayWithObjects:@"1",@"2",@"2.3",@"3.0",@"4.0",@"10",nil];
+//
+//    CGFloat sum = [[array valueForKeyPath:@"@sum.floatValue"] floatValue];
+//
+//    CGFloat avg = [[array valueForKeyPath:@"@avg.floatValue"] floatValue];
+//
+//    CGFloat max =[[array valueForKeyPath:@"@max.floatValue"] floatValue];
+//
+//    CGFloat min =[[array valueForKeyPath:@"@min.floatValue"] floatValue];
 
-    
 }
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
     NSLog(@"监听到了%@的%@属性发生了改变", object, keyPath);
