@@ -172,8 +172,8 @@ __weak id objTrace;
 {
     
     while (1) {
-        @synchronized(self) {
-//        [_lock lock];
+//        @synchronized(self) {
+        [_lock lock];
             [NSThread sleepForTimeInterval:1];
             
             if (_tickets > 0) {
@@ -183,8 +183,8 @@ __weak id objTrace;
                 NSLog(@"票卖完了  Thread:%@",[NSThread currentThread]);
                 break;
             }
-//        [_lock unlock];
-        }
+        [_lock unlock];
+//        }
     }
 }
 
